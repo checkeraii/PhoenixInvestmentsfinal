@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AiConference.io - Annual AI Innovation Summit</title>
+    <style>
+        :root {
+            --primary: #0a192f;
+            --secondary: #48a9a6;
+            --light: #f8f9fa;
+            --dark: #343a40;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--dark);
+            line-height: 1.6;
+        }
+        header {
+            background: var(--primary);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+        .container {
+            width: 85%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .logo {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        .tagline {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        nav {
+            background: var(--primary);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+        }
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+        }
+        nav li {
+            margin: 0 1.5rem;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: var(--secondary);
+        }
+        section {
+            padding: 4rem 0;
+        }
+        h2 {
+            color: var(--primary);
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+        }
+        .hero {
+            background: linear-gradient(rgba(10, 25, 47, 0.8), rgba(10, 25, 47, 0.8)), url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 6rem 0;
+        }
+        .btn {
+            display: inline-block;
+            background: var(--secondary);
+            color: white;
+            padding: 0.8rem 1.8rem;
+            text-decoration: none;
+            border-radius: 4px;
+            margin-top: 1rem;
+            font-weight: 500;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background: #3a8a87;
+        }
+        .speaker-grid, .sponsor-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .speaker-card, .sponsor-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .speaker-img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+        .speaker-info, .sponsor-info {
+            padding: 1.5rem;
+        }
+        .sponsor-logo {
+            height: 100px;
+            object-fit: contain;
+            display: block;
+            margin: 0 auto;
+        }
+        .agenda-item {
+            background: white;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        .time {
+            font-weight: bold;
+            color: var(--secondary);
+        }
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        input, textarea, select {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: inherit;
+        }
+        footer {
+            background: var(--primary);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">AiConference.io</div>
+            <div class="tagline">Shaping the Future of Artificial Intelligence</div>
+        </div>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#speakers">Speakers</a></li>
+            <li><a href="#agenda">Agenda</a></li>
+            <li><a href="#register">Register</a></li>
+            <li><a href="#sponsors">Sponsors</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <section class="hero">
+        <div class="container">
+            <h1>Annual International AI Conference</h1>
+            <p>October 15-17, 2023 | San Francisco, CA</p>
+            <a href="#register" class="btn">Register Now</a>
+        </div>
+    </section>
+    
+    <section id="about">
+        <div class="container">
+            <h2>About The Conference</h2>
+            <div class="about-content">
+                <p>AiConference.io brings together the brightest minds in artificial intelligence for three days of learning, networking, and innovation. Our 2023 event will feature over 100 speakers, 50+ sessions, and numerous networking opportunities with industry leaders.</p>
+                <p>This year's theme is "Responsible AI for Global Impact," focusing on how AI can be developed and deployed ethically to solve real-world problems across industries.</p>
+                <p>Key conference information:</p>
+                <ul>
+                    <li>Dates: October 15-17, 2023</li>
+                    <li>Location: Moscone Center, San Francisco</li>
+                    <li>Expected attendees: 5,000+</li>
+                    <li>Format: Keynotes, breakout sessions, workshops, and networking events</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    
+    <section id="speakers" style="background-color: #f8f9fa;">
+        <div class="container">
+            <h2>Featured Speakers</h2>
+            <div class="speaker-grid">
+                <div class="speaker-card">
+                    <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Dr. Sarah Chen" class="speaker-img">
+                    <div class="speaker-info">
+                        <h3>Dr. Sarah Chen</h3>
+                        <p>Chief AI Scientist, TechFuture</p>
+                        <p>Topic: Ethical AI Frameworks</p>
+                    </div>
+                </div>
+                <div class="speaker-card">
+                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="James Rodriguez" class="speaker-img">
+                    <div class="speaker-info">
+                        <h3>James Rodriguez</h3>
+                        <p>VP of AI, NeuralCorp</p>
+                        <p>Topic: AI in Healthcare</p>
+                    </div>
+                </div>
+                <div class="speaker-card">
+                    <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Priya Patel" class="speaker-img">
+                    <div class="speaker-info">
+                        <h3>Priya Patel</h3>
+                        <p>Founder, AI for Good</p>
+                        <p>Topic: Sustainable AI Solutions</p>
+                    </div>
+                </div>
+                <div class="speaker-card">
+                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Dr. Michael Zhang" class="speaker-img">
+                    <div class="speaker-info">
+                        <h3>Dr. Michael Zhang</h3>
+                        <p>Professor, Stanford AI Lab</p>
+                        <p>Topic: Next-Gen Machine Learning</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="agenda">
+        <div class="container">
+            <h2>Conference Agenda</h2>
+            <h3 style="text-align: center; color: var(--secondary);">Day 1: October 15, 2023</h3>
+            <div class="agenda-item">
+                <div class="time">8:00 AM - 9:00 AM</div>
+                <h3>Registration & Welcome Breakfast</h3>
+            </div>
+            <div class="agenda-item">
+                <div class="time">9:00 AM - 10:30 AM</div>
+                <h3>Opening Keynote: The State of AI in 2023</h3>
+                <p>Dr. Sarah Chen, Chief AI Scientist, TechFuture</p>
+            </div>
+            <div class="agenda-item">
+                <div class="time">10:45 AM - 12:00 PM</div>
+                <h3>Breakout Sessions</h3>
+                <ul>
+                    <li>AI Ethics Roundtable</li>
+                    <li>Machine Learning in Practice</li>
+                    <li>Startup Showcase</li>
+                </ul>
+            </div>
+            <div class="agenda-item">
+                <div class="time">12:00 PM - 1:30 PM</div>
+                <h3>Networking Lunch</h3>
+            </div>
+            <!-- More agenda items would go here -->
+        </div>
+    </section>
+    
+    <section id="register" style="background-color: #f8f9fa;">
+        <div class="container">
+            <h2>Register Now</h2>
+            <form>
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="company">Company/Organization</label>
+                    <input type="text" id="company">
+                </div>
+                <div class="form-group">
+                    <label for="ticket">Ticket Type</label>
+                    <select id="ticket" required>
+                        <option value="">Select an option</option>
+                        <option value="general">General Admission ($499)</option>
+                        <option value="student">Student ($199)</option>
+                        <option value="vip">VIP All-Access ($999)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="comments">Special Requirements</label>
+                    <textarea id="comments" rows="3"></textarea>
+                </div>
+                <button type="submit" class="btn">Complete Registration</button>
+            </form>
+        </div>
+    </section>
+    
+    <section id="sponsors">
+        <div class="container">
+            <h2>Our Sponsors & Partners</h2>
+            <div class="sponsor-grid">
+                <div class="sponsor-card">
+                    <img src="https://via.placeholder.com/200x100.png?text=TechFuture" alt="TechFuture" class="sponsor-logo">
+                    <div class="sponsor-info">
+                        <h3>Platinum Sponsor</h3>
+                    </div>
+                </div>
+                <div class="sponsor-card">
+                    <img src="https://via.placeholder.com/200x100.png?text=NeuralCorp" alt="NeuralCorp" class="sponsor-logo">
+                    <div class="sponsor-info">
+                        <h3>Gold Sponsor</h3>
+                    </div>
+                </div>
+                <div class="sponsor-card">
+                    <img src="https://via.placeholder.com/200x100.png?text=AI+For+Good" alt="AI for Good" class="sponsor-logo">
+                    <div class="sponsor-info">
+                        <h3>Community Partner</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="contact" style="background-color: #f8f9fa;">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+                <div>
+                    <h3>Get In Touch</h3>
+                    <p>Email: info@aiconference.io</p>
+                    <p>Phone: +1 (555) 123-4567</p>
+                    <p>Address: 123 Tech Plaza, San Francisco, CA 94107</p>
+                </div>
+                <form>
+                    <div class="form-group">
+                        <label for="contact-name">Name</label>
+                        <input type="text" id="contact-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-email">Email</label>
+                        <input type="email" id="contact-email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 AiConference.io. All rights reserved.</p>
+            <p>Follow us on <a href="#" style="color: var(--secondary);">Twitter</a>, <a href="#" style="color: var(--secondary);">LinkedIn</a>, and <a href="#" style="color: var(--secondary);">YouTube</a></p>
+        </div>
+    </footer>
+</body>
+</html>
